@@ -1,0 +1,78 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@next/next/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": { //https://eslint.org/docs/user-guide/configuring/configuration-files#adding-shared-settings
+        "react": {
+            "version": "detect"
+        }
+    },
+    "ignorePatterns": [
+        "webpack.*.js",
+        "/dist",
+        "/server"
+    ],
+    "rules": {
+        "no-unreachable": "error",
+        "no-extra-boolean-cast":"error",
+        "arrow-body-style":["error", "as-needed"],
+        "no-duplicate-imports":"error",
+        "no-var":"error",
+        "object-shorthand":"error",
+        "no-useless-rename":"error",
+        "no-useless-concat": "error",
+        "no-useless-escape":"error",
+        "default-case":"error",
+        "dot-notation":"error",
+        "no-alert":"warn",
+        "guard-for-in":"error",
+        "no-eval":"warn",
+        "no-eq-null":"error",
+        "no-lone-blocks":"error",
+        "no-lonely-if":"error",
+        "no-nested-ternary":"error",
+        "require-await":"error",
+        "newline-before-return":"error",
+        "no-magic-numbers":[
+            "error",
+            {
+                "ignore": [
+                    -1,
+                    0,
+                    1
+                ]
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.styles.ts"
+            ],
+            "rules": {
+                "no-magic-numbers":"off"
+            }
+        }
+    ]
+}

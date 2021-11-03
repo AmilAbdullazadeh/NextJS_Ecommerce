@@ -1,0 +1,1 @@
+export { LocalBusinessJSONLD } from './LocalBusinessJSONLD';
